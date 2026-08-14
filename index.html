@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>La Cocina de Antonia</title>
+  <title>La Cocina de Antonia | Comida para llevar</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,17 +18,9 @@
 <header class="header">
 
   <a href="#inicio" class="brand">
-    <span>La cocina de</span>
+    <span data-es="La cocina de" data-en="The kitchen of" data-fr="La cuisine d’">La cocina de</span>
     <strong>Antonia</strong>
   </a>
-
-  <div class="language-switcher">
-    <button class="lang active" data-lang="es">ES</button>
-    <span>·</span>
-    <button class="lang" data-lang="en">EN</button>
-    <span>·</span>
-    <button class="lang" data-lang="fr">FR</button>
-  </div>
 
   <button class="hamburger" id="hamburger">
     <i></i>
@@ -38,11 +29,38 @@
   </button>
 
   <nav id="nav">
-    <a href="#inicio" data-i18n="nav-home">Inicio</a>
-    <a href="#arroces" data-i18n="nav-rice">Arroces</a>
-    <a href="#llevar" data-i18n="nav-takeaway">Para llevar</a>
-    <a href="#dulces" data-i18n="nav-desserts">Dulces</a>
-    <a href="#contacto" data-i18n="nav-contact">Contacto</a>
+
+    <a href="#inicio"
+       data-es="Inicio"
+       data-en="Home"
+       data-fr="Accueil">Inicio</a>
+
+    <a href="#arroces"
+       data-es="Arroces"
+       data-en="Rice dishes"
+       data-fr="Riz">Arroces</a>
+
+    <a href="#llevar"
+       data-es="Para llevar"
+       data-en="Takeaway"
+       data-fr="À emporter">Para llevar</a>
+
+    <a href="#dulces"
+       data-es="Dulces"
+       data-en="Desserts"
+       data-fr="Desserts">Dulces</a>
+
+    <a href="#contacto"
+       data-es="Contacto"
+       data-en="Contact"
+       data-fr="Contact">Contacto</a>
+
+    <div class="language-switcher">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+
   </nav>
 
 </header>
@@ -50,7 +68,7 @@
 
 <main id="inicio">
 
-  <!-- PORTADA -->
+  <!-- HERO -->
   <section class="hero">
 
     <div class="hero-decoration tomato">●</div>
@@ -59,9 +77,16 @@
     <div class="hero-logo">
 
       <div class="logo-circle">
+
         <div class="logo-inner">
 
-          <span>La cocina de</span>
+          <span
+            data-es="La cocina de"
+            data-en="The kitchen of"
+            data-fr="La cuisine d’">
+            La cocina de
+          </span>
+
           <b>Antonia</b>
 
           <div class="chef">
@@ -69,11 +94,15 @@
             <div class="chef-body">🍴</div>
           </div>
 
-          <small data-i18n="takeaway-food">
+          <small
+            data-es="Comida para llevar"
+            data-en="Takeaway food"
+            data-fr="Plats à emporter">
             Comida para llevar
           </small>
 
         </div>
+
       </div>
 
     </div>
@@ -81,16 +110,35 @@
 
     <div class="hero-text">
 
-      <p class="small-title" data-i18n="homemade">
+      <p
+        class="small-title"
+        data-es="COCINA CASERA"
+        data-en="HOMEMADE FOOD"
+        data-fr="CUISINE MAISON">
         COCINA CASERA
       </p>
 
       <h1>
-        <span data-i18n="made-with">Hecha con</span><br>
-        <em data-i18n="love">cariño.</em>
+        <span
+          data-es="Hecha con"
+          data-en="Made with"
+          data-fr="Préparée avec">
+          Hecha con
+        </span>
+        <br>
+        <em
+          data-es="cariño."
+          data-en="love."
+          data-fr="amour.">
+          cariño.
+        </em>
       </h1>
 
-      <p class="hero-description" data-i18n="hero-description">
+      <p
+        class="hero-description"
+        data-es="El sabor de la cocina de siempre, preparado para que solo tengas que sentarte y disfrutar."
+        data-en="The taste of traditional home cooking, prepared so you only have to sit back and enjoy."
+        data-fr="Le goût de la cuisine traditionnelle, préparé pour que vous n’ayez plus qu’à vous asseoir et profiter.">
         El sabor de la cocina de siempre,
         preparado para que solo tengas que
         sentarte y disfrutar.
@@ -99,7 +147,12 @@
       <div class="hero-buttons">
 
         <a href="#llevar" class="primary-btn">
-          <span data-i18n="view-menu">Ver la carta</span>
+          <span
+            data-es="Ver la carta"
+            data-en="View menu"
+            data-fr="Voir la carte">
+            Ver la carta
+          </span>
           <span>↓</span>
         </a>
 
@@ -112,6 +165,7 @@
     </div>
 
 
+    <!-- CAZO DECORATIVO -->
     <div class="sauce-pan">
 
       <div class="pan-handle"></div>
@@ -136,16 +190,34 @@
 
       <div class="fork">✻</div>
 
-      <p class="label" data-i18n="takeaway">
+      <p
+        class="label"
+        data-es="COMIDA PARA LLEVAR"
+        data-en="TAKEAWAY FOOD"
+        data-fr="PLATS À EMPORTER">
         COMIDA PARA LLEVAR
       </p>
 
       <h2>
-        <span data-i18n="like-home">Como en casa,</span><br>
-        <em data-i18n="without-cooking">pero sin cocinar.</em>
+        <span
+          data-es="Como en casa,"
+          data-en="Just like home,"
+          data-fr="Comme à la maison,">
+          Como en casa,
+        </span>
+        <br>
+        <em
+          data-es="pero sin cocinar."
+          data-en="without the cooking."
+          data-fr="sans cuisiner.">
+          pero sin cocinar.
+        </em>
       </h2>
 
-      <p data-i18n="intro-description">
+      <p
+        data-es="Platos caseros preparados con mimo, recetas tradicionales y ese sabor que nos recuerda a la cocina de siempre."
+        data-en="Homemade dishes prepared with care, traditional recipes and that flavour that reminds us of home cooking."
+        data-fr="Des plats maison préparés avec soin, des recettes traditionnelles et cette saveur qui nous rappelle la cuisine de toujours.">
         Platos caseros preparados con mimo,
         recetas tradicionales y ese sabor
         que nos recuerda a la cocina de siempre.
@@ -169,11 +241,18 @@
 
       <div>
 
-        <p class="label" data-i18n="by-order">
+        <p
+          class="label"
+          data-es="POR ENCARGO"
+          data-en="ON ORDER"
+          data-fr="SUR COMMANDE">
           POR ENCARGO
         </p>
 
-        <h2 data-i18n="rice-title">
+        <h2
+          data-es="Arroces"
+          data-en="Rice dishes"
+          data-fr="Riz">
           Arroces
         </h2>
 
@@ -183,7 +262,11 @@
 
     </div>
 
-    <p class="minimum" data-i18n="minimum">
+    <p
+      class="minimum"
+      data-es="Mínimo 4 raciones"
+      data-en="Minimum 4 portions"
+      data-fr="Minimum 4 portions">
       Mínimo 4 raciones
     </p>
 
@@ -204,49 +287,90 @@
       <div class="rice-list">
 
         <div class="item">
-          <span data-i18n="rice-vegetables">Verduras</span>
+          <span
+            data-es="Verduras"
+            data-en="Vegetables"
+            data-fr="Légumes">
+            Verduras
+          </span>
           <b>8,50 €</b>
         </div>
 
         <div class="item">
-          <span data-i18n="rice-chicken">Verduras con pollo</span>
+          <span
+            data-es="Verduras con pollo"
+            data-en="Vegetables with chicken"
+            data-fr="Légumes au poulet">
+            Verduras con pollo
+          </span>
           <b>9,00 €</b>
         </div>
 
         <div class="item">
-          <span data-i18n="rice-mixed">Mixta</span>
+          <span
+            data-es="Mixta"
+            data-en="Mixed"
+            data-fr="Mixte">
+            Mixta
+          </span>
           <b>9,50 €</b>
         </div>
 
         <div class="item">
-          <span data-i18n="rice-seafood">Paella de marisco</span>
+          <span
+            data-es="Paella de marisco"
+            data-en="Seafood paella"
+            data-fr="Paella aux fruits de mer">
+            Paella de marisco
+          </span>
           <b>10,50 €</b>
         </div>
 
         <div class="item">
-          <span>A banda</span>
+          <span
+            data-es="A banda"
+            data-en="A banda"
+            data-fr="A banda">
+            A banda
+          </span>
           <b>10,50 €</b>
         </div>
 
         <div class="item">
-          <span>Señoret</span>
+          <span
+            data-es="Señoret"
+            data-en="Señoret"
+            data-fr="Señoret">
+            Señoret
+          </span>
           <b>10,50 €</b>
         </div>
 
         <div class="item">
-          <span data-i18n="black-rice">
+          <span
+            data-es="Arroz negro con sepia"
+            data-en="Black rice with cuttlefish"
+            data-fr="Riz noir à la seiche">
             Arroz negro con sepia
           </span>
           <b>10,50 €</b>
         </div>
 
         <div class="item">
-          <span>Fideuá</span>
+          <span
+            data-es="Fideuá"
+            data-en="Fideuà"
+            data-fr="Fideuà">
+            Fideuá
+          </span>
           <b>10,50 €</b>
         </div>
 
         <div class="item">
-          <span data-i18n="rice-langoustine">
+          <span
+            data-es="Paella de marisco con cigala"
+            data-en="Seafood paella with langoustine"
+            data-fr="Paella aux fruits de mer et langoustine">
             Paella de marisco con cigala
           </span>
           <b>12,50 €</b>
@@ -254,10 +378,24 @@
 
         <div class="item">
           <span>
-            <span data-i18n="rice-lobster">Arroz con bogavante</span>
-            <small data-i18n="minimum-two">(mín. 2 rac.)</small>
+            <span
+              data-es="Arroz con bogavante"
+              data-en="Lobster rice"
+              data-fr="Riz au homard">
+              Arroz con bogavante
+            </span>
+
+            <small
+              data-es="(mín. 2 rac.)"
+              data-en="(min. 2 portions)"
+              data-fr="(min. 2 portions)">
+              (mín. 2 rac.)
+            </small>
+
           </span>
+
           <b>15,50 €</b>
+
         </div>
 
       </div>
@@ -272,15 +410,25 @@
 
     <div class="section-title">
 
-      <span class="paint-label" data-i18n="takeaway-label">
+      <span
+        class="paint-label"
+        data-es="PARA LLEVAR"
+        data-en="TAKEAWAY"
+        data-fr="À EMPORTER">
         PARA LLEVAR
       </span>
 
-      <h2 data-i18n="homemade-dishes">
+      <h2
+        data-es="Platos caseros"
+        data-en="Homemade dishes"
+        data-fr="Plats maison">
         Platos caseros
       </h2>
 
-      <p data-i18n="takeaway-description">
+      <p
+        data-es="Preparados para disfrutar donde quieras."
+        data-en="Ready to enjoy wherever you want."
+        data-fr="Prêts à déguster où vous voulez.">
         Preparados para disfrutar donde quieras.
       </p>
 
@@ -290,7 +438,7 @@
     <div class="food-grid">
 
 
-      <!-- TARJETA 1 -->
+      <!-- COLUMNA 1 -->
       <div class="food-column">
 
         <article class="food-card">
@@ -307,24 +455,42 @@
           <div class="food-content">
 
             <div class="item">
-              <span data-i18n="roast-chicken">Pollo asado</span>
+              <span
+                data-es="Pollo asado"
+                data-en="Roast chicken"
+                data-fr="Poulet rôti">
+                Pollo asado
+              </span>
               <b>8,90 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="tortilla">Tortilla de patatas</span>
+              <span
+                data-es="Tortilla de patatas"
+                data-en="Spanish potato omelette"
+                data-fr="Omelette espagnole aux pommes de terre">
+                Tortilla de patatas
+              </span>
               <b>7,90 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="squid">
+              <span
+                data-es="Chipirones en su tinta"
+                data-en="Baby squid in its ink"
+                data-fr="Petits calamars à l’encre">
                 Chipirones en su tinta
               </span>
               <b>8,90 €</b>
             </div>
 
             <div class="item">
-              <span>Pisto manchego</span>
+              <span
+                data-es="Pisto manchego"
+                data-en="Manchego vegetable stew"
+                data-fr="Pisto manchego">
+                Pisto manchego
+              </span>
               <b>5,25 €</b>
             </div>
 
@@ -332,11 +498,17 @@
 
               <span>
 
-                <span data-i18n="empanada">
+                <span
+                  data-es="1/4 Empanada casera"
+                  data-en="1/4 Homemade empanada"
+                  data-fr="1/4 Empanada maison">
                   1/4 Empanada casera
                 </span>
 
-                <small data-i18n="empanada-flavours">
+                <small
+                  data-es="(pollo, carne, bonito, morcilla...)"
+                  data-en="(chicken, meat, tuna, blood sausage...)"
+                  data-fr="(poulet, viande, thon, boudin...)">
                   (pollo, carne, bonito, morcilla...)
                 </small>
 
@@ -347,28 +519,40 @@
             </div>
 
             <div class="item">
-              <span data-i18n="russian-salad">
+              <span
+                data-es="Ensaladilla rusa"
+                data-en="Russian salad"
+                data-fr="Salade russe">
                 Ensaladilla rusa
               </span>
               <b>4,25 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="pepper-salad">
+              <span
+                data-es="Ensaladilla de pimientos asados"
+                data-en="Roasted pepper salad"
+                data-fr="Salade de poivrons grillés">
                 Ensaladilla de pimientos asados
               </span>
               <b>4,75 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="house-salad">
+              <span
+                data-es="Ensaladilla de la casa"
+                data-en="House salad"
+                data-fr="Salade maison">
                 Ensaladilla de la casa
               </span>
               <b>5,25 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="meatballs">
+              <span
+                data-es="Albóndigas"
+                data-en="Meatballs"
+                data-fr="Boulettes de viande">
                 Albóndigas
               </span>
               <b>6,25 €</b>
@@ -378,13 +562,18 @@
 
               <span>
 
-                <span data-i18n="homemade-fries">
+                <span
+                  data-es="Patatas fritas caseras"
+                  data-en="Homemade French fries"
+                  data-fr="Frites maison">
                   Patatas fritas caseras
                 </span>
 
-                <small data-i18n="fries-note">
-                  (por encargo, realizadas con las mejores
-                  patatas y en el momento)
+                <small
+                  data-es="(por encargo, realizadas con las mejores patatas y en el momento)"
+                  data-en="(made to order with the best potatoes, freshly prepared)"
+                  data-fr="(sur commande, préparées avec les meilleures pommes de terre au moment)">
+                  (por encargo, realizadas con las mejores patatas y en el momento)
                 </small>
 
               </span>
@@ -395,20 +584,33 @@
             <div class="sub-items">
 
               <div class="item">
-                <span data-i18n="small">Pequeña</span>
+                <span
+                  data-es="Pequeña"
+                  data-en="Small"
+                  data-fr="Petite">
+                  Pequeña
+                </span>
                 <b>3,50 €</b>
               </div>
 
               <div class="item">
-                <span data-i18n="large">Grande</span>
+                <span
+                  data-es="Grande"
+                  data-en="Large"
+                  data-fr="Grande">
+                  Grande
+                </span>
                 <b>5,50 €</b>
               </div>
 
             </div>
 
 
-            <div class="croquetas-title"
-                 data-i18n="croquettes">
+            <div
+              class="croquetas-title"
+              data-es="Croquetas"
+              data-en="Croquettes"
+              data-fr="Croquettes">
               Croquetas
             </div>
 
@@ -417,11 +619,17 @@
 
               <span>
 
-                <span data-i18n="special-croquettes">
+                <span
+                  data-es="Salmón con espinacas, pollo, abuela, queso"
+                  data-en="Salmon with spinach, chicken, grandma-style, cheese"
+                  data-fr="Saumon aux épinards, poulet, recette de grand-mère, fromage">
                   Salmón con espinacas, pollo, abuela, queso
                 </span>
 
-                <small data-i18n="six-units">
+                <small
+                  data-es="6 unidades"
+                  data-en="6 pieces"
+                  data-fr="6 pièces">
                   6 unidades
                 </small>
 
@@ -431,24 +639,31 @@
 
             </div>
 
-
             <div class="item">
-              <span data-i18n="twelve-units">
+              <span
+                data-es="12 unidades"
+                data-en="12 pieces"
+                data-fr="12 pièces">
                 12 unidades
               </span>
               <b>8,00 €</b>
             </div>
 
-
             <div class="item multiline">
 
               <span>
 
-                <span data-i18n="ham-croquettes">
+                <span
+                  data-es="Jamón y especiales"
+                  data-en="Ham and special croquettes"
+                  data-fr="Jambon et spécialités">
                   Jamón y especiales
                 </span>
 
-                <small data-i18n="six-units">
+                <small
+                  data-es="6 unidades"
+                  data-en="6 pieces"
+                  data-fr="6 pièces">
                   6 unidades
                 </small>
 
@@ -458,12 +673,17 @@
 
             </div>
 
-
             <div class="item">
-              <span data-i18n="twelve-units">
+
+              <span
+                data-es="12 unidades"
+                data-en="12 pieces"
+                data-fr="12 pièces">
                 12 unidades
               </span>
+
               <b>8,90 €</b>
+
             </div>
 
           </div>
@@ -473,7 +693,7 @@
       </div>
 
 
-      <!-- TARJETA 2 -->
+      <!-- COLUMNA 2 -->
       <div class="food-column">
 
         <article class="food-card second-card">
@@ -490,14 +710,20 @@
           <div class="food-content">
 
             <div class="item">
-              <span data-i18n="lasagna">
+              <span
+                data-es="Lasaña de carne o verdura"
+                data-en="Meat or vegetable lasagna"
+                data-fr="Lasagnes à la viande ou aux légumes">
                 Lasaña de carne o verdura
               </span>
               <b>7,50 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="white-rice">
+              <span
+                data-es="Arroz blanco"
+                data-en="White rice"
+                data-fr="Riz blanc">
                 Arroz blanco
               </span>
               <b>2,90 €</b>
@@ -507,11 +733,17 @@
 
               <span>
 
-                <span data-i18n="aubergine">
+                <span
+                  data-es="Berenjenas fritas crujientes con miel"
+                  data-en="Crispy fried aubergine with honey"
+                  data-fr="Aubergines frites croustillantes au miel">
                   Berenjenas fritas crujientes con miel
                 </span>
 
-                <small data-i18n="by-order-small">
+                <small
+                  data-es="(por encargo)"
+                  data-en="(made to order)"
+                  data-fr="(sur commande)">
                   (por encargo)
                 </small>
 
@@ -522,14 +754,20 @@
             </div>
 
             <div class="item">
-              <span data-i18n="anchovies">
+              <span
+                data-es="Boquerones en vinagre"
+                data-en="Marinated anchovies"
+                data-fr="Anchois marinés au vinaigre">
                 Boquerones en vinagre
               </span>
               <b>5,50 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="fried-peppers">
+              <span
+                data-es="Pimientos fritos"
+                data-en="Fried peppers"
+                data-fr="Poivrons frits">
                 Pimientos fritos
               </span>
               <b>3,25 €</b>
@@ -539,11 +777,17 @@
 
               <span>
 
-                <span data-i18n="gazpacho">
+                <span
+                  data-es="Gazpacho y salmorejo"
+                  data-en="Gazpacho and salmorejo"
+                  data-fr="Gaspacho et salmorejo">
                   Gazpacho y salmorejo
                 </span>
 
-                <small data-i18n="season">
+                <small
+                  data-es="(en temporada)"
+                  data-en="(seasonal)"
+                  data-fr="(de saison)">
                   (en temporada)
                 </small>
 
@@ -557,11 +801,17 @@
 
               <span>
 
-                <span data-i18n="portion-paella">
+                <span
+                  data-es="Paella mixta por raciones"
+                  data-en="Mixed paella by portion"
+                  data-fr="Paella mixte à la portion">
                   Paella mixta por raciones
                 </span>
 
-                <small data-i18n="weekend">
+                <small
+                  data-es="Sab. y dom. a partir de las 13:30"
+                  data-en="Sat. and Sun. from 1:30 PM"
+                  data-fr="Sam. et dim. à partir de 13h30">
                   Sab. y dom. a partir de las 13:30
                 </small>
 
@@ -572,56 +822,83 @@
             </div>
 
             <div class="item">
-              <span data-i18n="piquillo">
+
+              <span
+                data-es="Pimientos de piquillo con ventresca caramelizados"
+                data-en="Caramelised piquillo peppers with tuna belly"
+                data-fr="Poivrons piquillo caramélisés au thon">
                 Pimientos de piquillo con ventresca caramelizados
               </span>
+
               <b>5,95 €</b>
+
             </div>
 
             <div class="item">
-              <span data-i18n="oxtail">
+              <span
+                data-es="Canelones de rabo de toro"
+                data-en="Oxtail cannelloni"
+                data-fr="Cannellonis à la queue de taureau">
                 Canelones de rabo de toro
               </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="cannelloni">
+              <span
+                data-es="Canelones de carne o verdura"
+                data-en="Meat or vegetable cannelloni"
+                data-fr="Cannellonis à la viande ou aux légumes">
                 Canelones de carne o verdura
               </span>
               <b>5,75 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="tenderloin">
+              <span
+                data-es="Solomillo en salsa de boletus"
+                data-en="Fillet steak with porcini sauce"
+                data-fr="Filet de porc sauce aux cèpes">
                 Solomillo en salsa de boletus
               </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="chicken-pie">
+              <span
+                data-es="Pastel de pollo y verduras"
+                data-en="Chicken and vegetable pie"
+                data-fr="Tourte au poulet et aux légumes">
                 Pastel de pollo y verduras
               </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="cod">
+              <span
+                data-es="Bacalao a la riojana"
+                data-en="Rioja-style cod"
+                data-fr="Morue à la riojana">
                 Bacalao a la riojana
               </span>
               <b>7,50 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="lentils">
+              <span
+                data-es="Lentejas con verduras"
+                data-en="Lentils with vegetables"
+                data-fr="Lentilles aux légumes">
                 Lentejas con verduras
               </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span data-i18n="broths">
+              <span
+                data-es="Caldos"
+                data-en="Broths"
+                data-fr="Bouillons">
                 Caldos
               </span>
               <b>7,25 €/l</b>
@@ -643,15 +920,26 @@
 
     <div class="dessert-decoration">🍰</div>
 
-    <p class="label" data-i18n="to-finish">
+    <p
+      class="label"
+      data-es="PARA TERMINAR"
+      data-en="TO FINISH"
+      data-fr="POUR TERMINER">
       PARA TERMINAR
     </p>
 
-    <h2 data-i18n="desserts-title">
+    <h2
+      data-es="Dulces"
+      data-en="Desserts"
+      data-fr="Desserts">
       Dulces
     </h2>
 
-    <p class="dessert-intro" data-i18n="dessert-description">
+    <p
+      class="dessert-intro"
+      data-es="Un pequeño capricho después de comer."
+      data-en="A little treat after your meal."
+      data-fr="Une petite gourmandise après le repas.">
       Un pequeño capricho después de comer.
     </p>
 
@@ -659,33 +947,50 @@
     <div class="dessert-card">
 
       <div class="item">
-        <span>Tiramisú</span>
+        <span
+          data-es="Tiramisú"
+          data-en="Tiramisu"
+          data-fr="Tiramisu">
+          Tiramisú
+        </span>
         <b>3,25 €</b>
       </div>
 
       <div class="item">
-        <span data-i18n="cheese-flan">
+        <span
+          data-es="Flan de queso"
+          data-en="Cheesecake flan"
+          data-fr="Flan au fromage">
           Flan de queso
         </span>
         <b>2,50 €</b>
       </div>
 
       <div class="item">
-        <span data-i18n="apple-pie">
+        <span
+          data-es="Mini tarta de manzana"
+          data-en="Mini apple pie"
+          data-fr="Mini tarte aux pommes">
           Mini tarta de manzana
         </span>
         <b>3,25 €</b>
       </div>
 
       <div class="item">
-        <span data-i18n="apple-mousse">
+        <span
+          data-es="Mousse de queso con manzana"
+          data-en="Cheese mousse with apple"
+          data-fr="Mousse de fromage à la pomme">
           Mousse de queso con manzana
         </span>
         <b>3,25 €</b>
       </div>
 
       <div class="item">
-        <span data-i18n="rice-pudding">
+        <span
+          data-es="Arroz con leche"
+          data-en="Rice pudding"
+          data-fr="Riz au lait">
           Arroz con leche
         </span>
         <b>2,50 €</b>
@@ -703,11 +1008,17 @@
 
     <div>
 
-      <h3 data-i18n="bread-drinks">
+      <h3
+        data-es="Pan, refrescos y vinos"
+        data-en="Bread, soft drinks and wine"
+        data-fr="Pain, boissons et vins">
         Pan, refrescos y vinos
       </h3>
 
-      <p data-i18n="complete-meal">
+      <p
+        data-es="Para completar tus comidas y cenas."
+        data-en="To complete your meals and dinners."
+        data-fr="Pour compléter vos repas et dîners.">
         Para completar tus comidas y cenas.
       </p>
 
@@ -719,13 +1030,19 @@
   <!-- CONTACTO -->
   <section class="contact" id="contacto">
 
-    <p class="label" data-i18n="order">
+    <p
+      class="label"
+      data-es="HAZ TU PEDIDO"
+      data-en="PLACE YOUR ORDER"
+      data-fr="PASSEZ VOTRE COMMANDE">
       HAZ TU PEDIDO
     </p>
 
-    <h2>
-      <span data-i18n="waiting">Te esperamos</span><br>
-      <span data-i18n="at-antonia">en Antonia.</span>
+    <h2
+      data-es="Te esperamos en Antonia."
+      data-en="We look forward to seeing you at Antonia."
+      data-fr="Nous vous attendons chez Antonia.">
+      Te esperamos<br>en Antonia.
     </h2>
 
 
@@ -737,7 +1054,10 @@
 
         <div>
 
-          <small data-i18n="phone">
+          <small
+            data-es="Teléfono"
+            data-en="Phone"
+            data-fr="Téléphone">
             Teléfono
           </small>
 
@@ -748,8 +1068,7 @@
       </a>
 
 
-      <a href="https://wa.me/34653926270"
-         class="contact-button">
+      <a href="https://wa.me/34653926270" class="contact-button">
 
         <span>◉</span>
 
@@ -785,6 +1104,7 @@
 
   </section>
 
+
 </main>
 
 
@@ -792,16 +1112,30 @@
 
   <div class="footer-brand">
 
-    <span>La cocina de</span>
+    <span
+      data-es="La cocina de"
+      data-en="The kitchen of"
+      data-fr="La cuisine d’">
+      La cocina de
+    </span>
+
     <strong>Antonia</strong>
 
   </div>
 
-  <p data-i18n="footer-description">
+
+  <p
+    data-es="Comida para llevar · Cocina casera"
+    data-en="Takeaway food · Homemade cooking"
+    data-fr="Plats à emporter · Cuisine maison">
     Comida para llevar · Cocina casera
   </p>
 
-  <small data-i18n="footer-note">
+
+  <small
+    data-es="Estos precios podrán ser cambiados por la dirección sin previo aviso."
+    data-en="These prices may be changed by management without prior notice."
+    data-fr="Ces prix peuvent être modifiés par la direction sans préavis.">
     Estos precios podrán ser cambiados por la dirección sin previo aviso.
   </small>
 
