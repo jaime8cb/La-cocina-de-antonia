@@ -1054,3 +1054,52 @@ footer small {
   }
 
 }
+/* =========================
+   IDIOMAS
+========================= */
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 5px 5px;
+}
+
+.lang-btn {
+  border: 1px solid var(--red);
+  background: transparent;
+  color: var(--red);
+
+  border-radius: 20px;
+
+  padding: 7px 11px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .2s ease;
+}
+
+.lang-btn.active {
+  background: var(--red);
+  color: white;
+}
+
+.lang-btn:hover {
+  background: var(--red);
+  color: white;
+}
+
+
+/* Evita que los botones de idioma se deformen */
+
+@media (max-width: 699px) {
+
+  .language-switcher {
+    justify-content: flex-start;
+  }
+
+}
