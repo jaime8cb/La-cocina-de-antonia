@@ -436,128 +436,58 @@ const translations = {
 
 
 /* =========================
-   CAMBIAR TEXTO
+   SISTEMA DE IDIOMAS
 ========================= */
 
-function normalizeText(text) {
-  return text
-    .replace(/\s+/g, " ")
-    .trim();
-}
+const originalTexts = new WeakMap();
+
+/* Guardamos el texto original de cada elemento */
+document.querySelectorAll("body *").forEach(element => {
+
+  if (element.children.length === 0) {
+    const text = element.textContent.trim();
+
+    if (text) {
+      originalTexts.set(element, text);
+    }
+  }
+
+});
 
 
 function translatePage(language) {
 
-  const walker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_TEXT
-  );
+  document.querySelectorAll("body *").forEach(element => {
 
-  const textNodes = [];
+    if (element.children.length !== 0) return;
 
-  while (walker.nextNode()) {
-    textNodes.push(walker.currentNode);
-  }
-
-  textNodes.forEach(node => {
-
-    const original = normalizeText(node.nodeValue);
+    const original = originalTexts.get(element);
 
     if (!original) return;
 
-    const translation = translations[original];
-
-    if (translation && translation[language]) {
-
-      const leadingSpaces =
-        node.nodeValue.match(/^\s*/)?.[0] || "";
-
-      const trailingSpaces =
-        node.nodeValue.match(/\s*$/)?.[0] || "";
-
-      node.nodeValue =
-        leadingSpaces +
-        translation[language] +
-        trailingSpaces;
+    /* Español */
+    if (language === "es") {
+      element.textContent = original;
+      return;
     }
 
-  });
+    /* Inglés */
+    if (
+      translations[original] &&
+      translations[original].en
+    ) {
+      element.textContent =
+        translations[original].en;
+      return;
+    }
 
-
-  /* Cambiar subtítulos dentro de <small> */
-  translateSpecialText(language);
-
-}
-
-
-/* =========================
-   TEXTOS ESPECIALES
-========================= */
-
-function translateSpecialText(language) {
-
-  const smalls = document.querySelectorAll("small");
-
-  smalls.forEach(small => {
-
-    const text = normalizeText(small.textContent);
-
-    const special = {
-
-      "Mínimo 4 raciones": {
-        en: "Minimum 4 portions",
-        fr: "Minimum 4 portions"
-      },
-
-      "(mín. 2 rac.)": {
-        en: "(min. 2 portions)",
-        fr: "(min. 2 portions)"
-      },
-
-      "(pollo, carne, bonito, morcilla...)": {
-        en: "(chicken, beef, tuna, blood sausage...)",
-        fr: "(poulet, bœuf, thon, boudin...)"
-      },
-
-      "6 unidades": {
-        en: "6 units",
-        fr: "6 unités"
-      },
-
-      "12 unidades": {
-        en: "12 units",
-        fr: "12 unités"
-      },
-
-      "(por encargo)": {
-        en: "(made to order)",
-        fr: "(sur commande)"
-      },
-
-      "(en temporada)": {
-        en: "(seasonal)",
-        fr: "(de saison)"
-      },
-
-      "Sab. y dom. a partir de las 13:30": {
-        en: "Sat. & Sun. from 1:30 PM",
-        fr: "Sam. & dim. à partir de 13h30"
-      },
-
-      "(mín. 2 rac.)": {
-        en: "(min. 2 portions)",
-        fr: "(min. 2 portions)"
-      },
-
-      "(por encargo, realizadas con las mejores patatas y en el momento)": {
-        en: "(made to order with the best potatoes, freshly prepared)",
-        fr: "(sur commande, préparées avec les meilleures pommes de terre)"
-      }
-
-    };
-
-    if (special[text]) {
-      small.textContent = special[text][language];
+    /* Francés */
+    if (
+      translations[original] &&
+      translations[original].fr
+    ) {
+      element.textContent =
+        translations[original].fr;
     }
 
   });
@@ -566,7 +496,7 @@ function translateSpecialText(language) {
 
 
 /* =========================
-   BOTONES DE IDIOMA
+   BOTONES
 ========================= */
 
 const languageButtons =
@@ -575,17 +505,24 @@ const languageButtons =
 
 languageButtons.forEach(button => {
 
-  button.addEventListener("click", () => {
+  button.addEventListener("click", function () {
 
-    const language = button.dataset.lang;
+    const language =
+      this.getAttribute("data-lang");
+
+    /* Cambiar botón activo */
 
     languageButtons.forEach(btn => {
       btn.classList.remove("active");
     });
 
-    button.classList.add("active");
+    this.classList.add("active");
+
+    /* Traducir */
 
     translatePage(language);
+
+    /* Guardar idioma */
 
     localStorage.setItem(
       "antonia-language",
@@ -604,7 +541,7 @@ languageButtons.forEach(button => {
 const savedLanguage =
   localStorage.getItem("antonia-language");
 
-if (savedLanguage && savedLanguage !== "es") {
+if (savedLanguage) {
 
   const savedButton =
     document.querySelector(
@@ -612,10 +549,12 @@ if (savedLanguage && savedLanguage !== "es") {
     );
 
   if (savedButton) {
+
+    languageButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
+
     savedButton.classList.add("active");
-    document
-      .querySelector('.lang[data-lang="es"]')
-      .classList.remove("active");
 
     translatePage(savedLanguage);
   }
