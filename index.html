@@ -3,21 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Cocina de Antonia | Comida para llevar</title>
+
+  <title>La Cocina de Antonia</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="header">
+
   <a href="#inicio" class="brand">
     <span>La cocina de</span>
     <strong>Antonia</strong>
   </a>
+
+  <div class="language-switcher">
+    <button class="lang active" data-lang="es">ES</button>
+    <span>·</span>
+    <button class="lang" data-lang="en">EN</button>
+    <span>·</span>
+    <button class="lang" data-lang="fr">FR</button>
+  </div>
 
   <button class="hamburger" id="hamburger">
     <i></i>
@@ -25,27 +37,20 @@
     <i></i>
   </button>
 
-<div class="language-switcher">
-  <button class="lang active" data-lang="es">ES</button>
-  <span>·</span>
-  <button class="lang" data-lang="en">EN</button>
-  <span>·</span>
-  <button class="lang" data-lang="fr">FR</button>
-</div>
-
   <nav id="nav">
-    <a href="#inicio">Inicio</a>
-    <a href="#arroces">Arroces</a>
-    <a href="#llevar">Para llevar</a>
-    <a href="#dulces">Dulces</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#inicio" data-i18n="nav-home">Inicio</a>
+    <a href="#arroces" data-i18n="nav-rice">Arroces</a>
+    <a href="#llevar" data-i18n="nav-takeaway">Para llevar</a>
+    <a href="#dulces" data-i18n="nav-desserts">Dulces</a>
+    <a href="#contacto" data-i18n="nav-contact">Contacto</a>
   </nav>
+
 </header>
 
 
 <main id="inicio">
 
-  <!-- HERO -->
+  <!-- PORTADA -->
   <section class="hero">
 
     <div class="hero-decoration tomato">●</div>
@@ -55,6 +60,7 @@
 
       <div class="logo-circle">
         <div class="logo-inner">
+
           <span>La cocina de</span>
           <b>Antonia</b>
 
@@ -63,43 +69,61 @@
             <div class="chef-body">🍴</div>
           </div>
 
-          <small>Comida para llevar</small>
+          <small data-i18n="takeaway-food">
+            Comida para llevar
+          </small>
+
         </div>
       </div>
 
     </div>
 
-    <div class="hero-text">
-      <p class="small-title">COCINA CASERA</p>
-      <h1>Hecha con<br><em>cariño.</em></h1>
 
-      <p class="hero-description">
+    <div class="hero-text">
+
+      <p class="small-title" data-i18n="homemade">
+        COCINA CASERA
+      </p>
+
+      <h1>
+        <span data-i18n="made-with">Hecha con</span><br>
+        <em data-i18n="love">cariño.</em>
+      </h1>
+
+      <p class="hero-description" data-i18n="hero-description">
         El sabor de la cocina de siempre,
         preparado para que solo tengas que
         sentarte y disfrutar.
       </p>
 
       <div class="hero-buttons">
+
         <a href="#llevar" class="primary-btn">
-          Ver la carta
+          <span data-i18n="view-menu">Ver la carta</span>
           <span>↓</span>
         </a>
 
         <a href="tel:918591301" class="phone-btn">
           ☎
         </a>
+
       </div>
+
     </div>
 
-    <!-- Cazo decorativo -->
+
     <div class="sauce-pan">
+
       <div class="pan-handle"></div>
+
       <div class="pan">
         <div class="sauce"></div>
       </div>
+
       <div class="drop d1"></div>
       <div class="drop d2"></div>
       <div class="drop d3"></div>
+
     </div>
 
   </section>
@@ -112,11 +136,16 @@
 
       <div class="fork">✻</div>
 
-      <p class="label">COMIDA PARA LLEVAR</p>
+      <p class="label" data-i18n="takeaway">
+        COMIDA PARA LLEVAR
+      </p>
 
-      <h2>Como en casa,<br><em>pero sin cocinar.</em></h2>
+      <h2>
+        <span data-i18n="like-home">Como en casa,</span><br>
+        <em data-i18n="without-cooking">pero sin cocinar.</em>
+      </h2>
 
-      <p>
+      <p data-i18n="intro-description">
         Platos caseros preparados con mimo,
         recetas tradicionales y ese sabor
         que nos recuerda a la cocina de siempre.
@@ -137,46 +166,60 @@
   <section class="rice-section" id="arroces">
 
     <div class="section-top">
+
       <div>
-        <p class="label">POR ENCARGO</p>
-        <h2>Arroces</h2>
+
+        <p class="label" data-i18n="by-order">
+          POR ENCARGO
+        </p>
+
+        <h2 data-i18n="rice-title">
+          Arroces
+        </h2>
+
       </div>
 
       <div class="rice-icon">🥘</div>
+
     </div>
 
-    <p class="minimum">
+    <p class="minimum" data-i18n="minimum">
       Mínimo 4 raciones
     </p>
+
 
     <div class="rice-card">
 
       <div class="rice-photo">
+
         <img
           src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=900&q=85"
           alt="Paella">
+
         <span>🥘</span>
+
       </div>
+
 
       <div class="rice-list">
 
         <div class="item">
-          <span>Verduras</span>
+          <span data-i18n="rice-vegetables">Verduras</span>
           <b>8,50 €</b>
         </div>
 
         <div class="item">
-          <span>Verduras con pollo</span>
+          <span data-i18n="rice-chicken">Verduras con pollo</span>
           <b>9,00 €</b>
         </div>
 
         <div class="item">
-          <span>Mixta</span>
+          <span data-i18n="rice-mixed">Mixta</span>
           <b>9,50 €</b>
         </div>
 
         <div class="item">
-          <span>Paella de marisco</span>
+          <span data-i18n="rice-seafood">Paella de marisco</span>
           <b>10,50 €</b>
         </div>
 
@@ -191,7 +234,9 @@
         </div>
 
         <div class="item">
-          <span>Arroz negro con sepia</span>
+          <span data-i18n="black-rice">
+            Arroz negro con sepia
+          </span>
           <b>10,50 €</b>
         </div>
 
@@ -201,12 +246,17 @@
         </div>
 
         <div class="item">
-          <span>Paella de marisco con cigala</span>
+          <span data-i18n="rice-langoustine">
+            Paella de marisco con cigala
+          </span>
           <b>12,50 €</b>
         </div>
 
         <div class="item">
-          <span>Arroz con bogavante <small>(mín. 2 rac.)</small></span>
+          <span>
+            <span data-i18n="rice-lobster">Arroz con bogavante</span>
+            <small data-i18n="minimum-two">(mín. 2 rac.)</small>
+          </span>
           <b>15,50 €</b>
         </div>
 
@@ -221,34 +271,55 @@
   <section class="takeaway" id="llevar">
 
     <div class="section-title">
-      <span class="paint-label">PARA LLEVAR</span>
-      <h2>Platos caseros</h2>
-      <p>Preparados para disfrutar donde quieras.</p>
+
+      <span class="paint-label" data-i18n="takeaway-label">
+        PARA LLEVAR
+      </span>
+
+      <h2 data-i18n="homemade-dishes">
+        Platos caseros
+      </h2>
+
+      <p data-i18n="takeaway-description">
+        Preparados para disfrutar donde quieras.
+      </p>
+
     </div>
+
 
     <div class="food-grid">
 
-      <!-- COLUMNA 1 -->
+
+      <!-- TARJETA 1 -->
       <div class="food-column">
 
         <article class="food-card">
+
           <div class="food-photo">
-            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=85" alt="Pollo asado">
+
+            <img
+              src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=85"
+              alt="Pollo asado">
+
           </div>
 
+
           <div class="food-content">
+
             <div class="item">
-              <span>Pollo asado</span>
+              <span data-i18n="roast-chicken">Pollo asado</span>
               <b>8,90 €</b>
             </div>
 
             <div class="item">
-              <span>Tortilla de patatas</span>
+              <span data-i18n="tortilla">Tortilla de patatas</span>
               <b>7,90 €</b>
             </div>
 
             <div class="item">
-              <span>Chipirones en su tinta</span>
+              <span data-i18n="squid">
+                Chipirones en su tinta
+              </span>
               <b>8,90 €</b>
             </div>
 
@@ -258,186 +329,306 @@
             </div>
 
             <div class="item multiline">
+
               <span>
-                1/4 Empanada casera
-                <small>(pollo, carne, bonito, morcilla...)</small>
+
+                <span data-i18n="empanada">
+                  1/4 Empanada casera
+                </span>
+
+                <small data-i18n="empanada-flavours">
+                  (pollo, carne, bonito, morcilla...)
+                </small>
+
               </span>
+
               <b>7,75 €</b>
+
             </div>
 
             <div class="item">
-              <span>Ensaladilla rusa</span>
+              <span data-i18n="russian-salad">
+                Ensaladilla rusa
+              </span>
               <b>4,25 €</b>
             </div>
 
             <div class="item">
-              <span>Ensaladilla de pimientos asados</span>
+              <span data-i18n="pepper-salad">
+                Ensaladilla de pimientos asados
+              </span>
               <b>4,75 €</b>
             </div>
 
             <div class="item">
-              <span>Ensaladilla de la casa</span>
+              <span data-i18n="house-salad">
+                Ensaladilla de la casa
+              </span>
               <b>5,25 €</b>
             </div>
 
             <div class="item">
-              <span>Albóndigas</span>
+              <span data-i18n="meatballs">
+                Albóndigas
+              </span>
               <b>6,25 €</b>
             </div>
 
             <div class="item multiline">
+
               <span>
-                Patatas fritas caseras
-                <small>
+
+                <span data-i18n="homemade-fries">
+                  Patatas fritas caseras
+                </span>
+
+                <small data-i18n="fries-note">
                   (por encargo, realizadas con las mejores
                   patatas y en el momento)
                 </small>
+
               </span>
+
             </div>
 
+
             <div class="sub-items">
+
               <div class="item">
-                <span>Pequeña</span>
+                <span data-i18n="small">Pequeña</span>
                 <b>3,50 €</b>
               </div>
 
               <div class="item">
-                <span>Grande</span>
+                <span data-i18n="large">Grande</span>
                 <b>5,50 €</b>
               </div>
+
             </div>
 
-            <div class="croquetas-title">Croquetas</div>
+
+            <div class="croquetas-title"
+                 data-i18n="croquettes">
+              Croquetas
+            </div>
+
 
             <div class="item multiline">
+
               <span>
-                Salmón con espinacas,
-                pollo, abuela, queso
-                <small>6 unidades</small>
+
+                <span data-i18n="special-croquettes">
+                  Salmón con espinacas, pollo, abuela, queso
+                </span>
+
+                <small data-i18n="six-units">
+                  6 unidades
+                </small>
+
               </span>
+
               <b>4,50 €</b>
+
             </div>
 
+
             <div class="item">
-              <span>12 unidades</span>
+              <span data-i18n="twelve-units">
+                12 unidades
+              </span>
               <b>8,00 €</b>
             </div>
 
+
             <div class="item multiline">
+
               <span>
-                Jamón y especiales
-                <small>6 unidades</small>
+
+                <span data-i18n="ham-croquettes">
+                  Jamón y especiales
+                </span>
+
+                <small data-i18n="six-units">
+                  6 unidades
+                </small>
+
               </span>
+
               <b>4,75 €</b>
+
             </div>
 
+
             <div class="item">
-              <span>12 unidades</span>
+              <span data-i18n="twelve-units">
+                12 unidades
+              </span>
               <b>8,90 €</b>
             </div>
 
           </div>
+
         </article>
 
       </div>
 
 
-      <!-- COLUMNA 2 -->
+      <!-- TARJETA 2 -->
       <div class="food-column">
 
         <article class="food-card second-card">
 
           <div class="food-photo">
-            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85" alt="Comida casera">
+
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+              alt="Comida casera">
+
           </div>
+
 
           <div class="food-content">
 
             <div class="item">
-              <span>Lasaña de carne o verdura</span>
+              <span data-i18n="lasagna">
+                Lasaña de carne o verdura
+              </span>
               <b>7,50 €</b>
             </div>
 
             <div class="item">
-              <span>Arroz blanco</span>
+              <span data-i18n="white-rice">
+                Arroz blanco
+              </span>
               <b>2,90 €</b>
             </div>
 
             <div class="item multiline">
+
               <span>
-                Berenjenas fritas crujientes con miel
-                <small>(por encargo)</small>
+
+                <span data-i18n="aubergine">
+                  Berenjenas fritas crujientes con miel
+                </span>
+
+                <small data-i18n="by-order-small">
+                  (por encargo)
+                </small>
+
               </span>
+
               <b>6,50 €</b>
+
             </div>
 
             <div class="item">
-              <span>Boquerones en vinagre</span>
+              <span data-i18n="anchovies">
+                Boquerones en vinagre
+              </span>
               <b>5,50 €</b>
             </div>
 
             <div class="item">
-              <span>Pimientos fritos</span>
+              <span data-i18n="fried-peppers">
+                Pimientos fritos
+              </span>
               <b>3,25 €</b>
             </div>
 
             <div class="item multiline">
+
               <span>
-                Gazpacho y salmorejo
-                <small>(en temporada)</small>
+
+                <span data-i18n="gazpacho">
+                  Gazpacho y salmorejo
+                </span>
+
+                <small data-i18n="season">
+                  (en temporada)
+                </small>
+
               </span>
+
               <b>7,25 €</b>
+
             </div>
 
             <div class="item multiline">
+
               <span>
-                Paella mixta por raciones
-                <small>Sab. y dom. a partir de las 13:30</small>
+
+                <span data-i18n="portion-paella">
+                  Paella mixta por raciones
+                </span>
+
+                <small data-i18n="weekend">
+                  Sab. y dom. a partir de las 13:30
+                </small>
+
               </span>
+
               <b>9,50 €/rac</b>
+
             </div>
 
             <div class="item">
-              <span>Pimientos de piquillo con ventresca caramelizados</span>
+              <span data-i18n="piquillo">
+                Pimientos de piquillo con ventresca caramelizados
+              </span>
               <b>5,95 €</b>
             </div>
 
             <div class="item">
-              <span>Canelones de rabo de toro</span>
+              <span data-i18n="oxtail">
+                Canelones de rabo de toro
+              </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span>Canelones de carne o verdura</span>
+              <span data-i18n="cannelloni">
+                Canelones de carne o verdura
+              </span>
               <b>5,75 €</b>
             </div>
 
             <div class="item">
-              <span>Solomillo en salsa de boletus</span>
+              <span data-i18n="tenderloin">
+                Solomillo en salsa de boletus
+              </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span>Pastel de pollo y verduras</span>
+              <span data-i18n="chicken-pie">
+                Pastel de pollo y verduras
+              </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span>Bacalao a la riojana</span>
+              <span data-i18n="cod">
+                Bacalao a la riojana
+              </span>
               <b>7,50 €</b>
             </div>
 
             <div class="item">
-              <span>Lentejas con verduras</span>
+              <span data-i18n="lentils">
+                Lentejas con verduras
+              </span>
               <b>6,90 €</b>
             </div>
 
             <div class="item">
-              <span>Caldos</span>
+              <span data-i18n="broths">
+                Caldos
+              </span>
               <b>7,25 €/l</b>
             </div>
 
           </div>
+
         </article>
 
       </div>
@@ -452,11 +643,18 @@
 
     <div class="dessert-decoration">🍰</div>
 
-    <p class="label">PARA TERMINAR</p>
-    <h2>Dulces</h2>
-    <p class="dessert-intro">
+    <p class="label" data-i18n="to-finish">
+      PARA TERMINAR
+    </p>
+
+    <h2 data-i18n="desserts-title">
+      Dulces
+    </h2>
+
+    <p class="dessert-intro" data-i18n="dessert-description">
       Un pequeño capricho después de comer.
     </p>
+
 
     <div class="dessert-card">
 
@@ -466,22 +664,30 @@
       </div>
 
       <div class="item">
-        <span>Flan de queso</span>
+        <span data-i18n="cheese-flan">
+          Flan de queso
+        </span>
         <b>2,50 €</b>
       </div>
 
       <div class="item">
-        <span>Mini tarta de manzana</span>
+        <span data-i18n="apple-pie">
+          Mini tarta de manzana
+        </span>
         <b>3,25 €</b>
       </div>
 
       <div class="item">
-        <span>Mousse de queso con manzana</span>
+        <span data-i18n="apple-mousse">
+          Mousse de queso con manzana
+        </span>
         <b>3,25 €</b>
       </div>
 
       <div class="item">
-        <span>Arroz con leche</span>
+        <span data-i18n="rice-pudding">
+          Arroz con leche
+        </span>
         <b>2,50 €</b>
       </div>
 
@@ -490,14 +696,21 @@
   </section>
 
 
-  <!-- FOOTER CTA -->
+  <!-- BANNER -->
   <section class="last-banner">
 
     <div class="bread">🥖</div>
 
     <div>
-      <h3>Pan, refrescos y vinos</h3>
-      <p>Para completar tus comidas y cenas.</p>
+
+      <h3 data-i18n="bread-drinks">
+        Pan, refrescos y vinos
+      </h3>
+
+      <p data-i18n="complete-meal">
+        Para completar tus comidas y cenas.
+      </p>
+
     </div>
 
   </section>
@@ -506,54 +719,92 @@
   <!-- CONTACTO -->
   <section class="contact" id="contacto">
 
-    <p class="label">HAZ TU PEDIDO</p>
-    <h2>Te esperamos<br>en Antonia.</h2>
+    <p class="label" data-i18n="order">
+      HAZ TU PEDIDO
+    </p>
+
+    <h2>
+      <span data-i18n="waiting">Te esperamos</span><br>
+      <span data-i18n="at-antonia">en Antonia.</span>
+    </h2>
+
 
     <div class="contact-buttons">
 
       <a href="tel:918591301" class="contact-button">
+
         <span>☎</span>
+
         <div>
-          <small>Teléfono</small>
+
+          <small data-i18n="phone">
+            Teléfono
+          </small>
+
           <strong>91 859 13 01</strong>
+
         </div>
+
       </a>
 
-      <a href="https://wa.me/34653926270" class="contact-button">
+
+      <a href="https://wa.me/34653926270"
+         class="contact-button">
+
         <span>◉</span>
+
         <div>
+
           <small>WhatsApp</small>
+
           <strong>653 926 270</strong>
+
         </div>
+
       </a>
 
     </div>
 
+
     <div class="address">
+
       <span>⌖</span>
+
       <div>
+
         <strong>La Cocina de Antonia</strong>
-        <p>Plaza de la Constitución, 9<br>Torrelodones, Madrid</p>
+
+        <p>
+          Plaza de la Constitución, 9<br>
+          Torrelodones, Madrid
+        </p>
+
       </div>
+
     </div>
 
   </section>
-
 
 </main>
 
 
 <footer>
+
   <div class="footer-brand">
+
     <span>La cocina de</span>
     <strong>Antonia</strong>
+
   </div>
 
-  <p>Comida para llevar · Cocina casera</p>
+  <p data-i18n="footer-description">
+    Comida para llevar · Cocina casera
+  </p>
 
-  <small>
+  <small data-i18n="footer-note">
     Estos precios podrán ser cambiados por la dirección sin previo aviso.
   </small>
+
 </footer>
 
 
