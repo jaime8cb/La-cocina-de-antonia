@@ -19,67 +19,6 @@ document.querySelectorAll("#nav a").forEach(link => {
 });
 
 
-/* =========================
-   ANIMACIONES
-========================= */
-
-const cards = document.querySelectorAll(
-  ".food-card, .rice-card, .dessert-card"
-);
-
-const observer = new IntersectionObserver(
-  entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add("visible");
-
-      }
-
-    });
-
-  },
-  {
-    threshold: 0.12
-  }
-);
-
-
-cards.forEach(card => {
-
-  card.style.opacity = "0";
-
-  card.style.transform =
-    "translateY(20px)";
-
-  card.style.transition =
-    "opacity .6s ease, transform .6s ease";
-
-  observer.observe(card);
-
-});
-
-
-const animationStyle =
-  document.createElement("style");
-
-animationStyle.innerHTML = `
-
-.rice-card.visible,
-.food-card.visible,
-.dessert-card.visible {
-
-  opacity: 1 !important;
-
-  transform:
-    translateY(0) !important;
-}
-
-`;
-
-document.head.appendChild(animationStyle);
 
 
 /* =========================
